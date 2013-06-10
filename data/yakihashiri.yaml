@@ -1,0 +1,15 @@
+url:
+  '/images/yakihashiri2012.jpg'
+tokei:
+  top: '430'
+  left: '640'
+  color: '#fff'
+  font: 'Mafra'
+name:
+  'IS member'
+title:
+  'IS member at Yakihashiri Marathon 2012'
+bio:
+  'IS laboratory'
+taken_by:
+  'somebody'

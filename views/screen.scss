@@ -1,0 +1,63 @@
+html {
+  -webkit-text-size-adjust: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tokei-text {
+  position: absolute;
+  z-index: 1;
+}
+
+.tokei-box {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+img.tokei-image {
+  position: relative;
+}
+
+.info-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  width: 100%;
+  z-index: 1;
+}
+
+.info-box {
+  margin: 10px;
+}
+
+.bio {
+  font-size: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.name {
+  font-size: 36px;
+}
+
+.taken-by {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.loading-box {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
