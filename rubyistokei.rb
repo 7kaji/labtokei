@@ -1,10 +1,10 @@
 require 'bundler'
 Bundler.require
-
 require 'yaml'
 require 'json'
 require 'digest/sha1'
 
+set :bind, '0.0.0.0'
 class Database
   def initialize(path)
     data_loaded = Dir[File.join(path, '*.yaml')].map do |yaml_path|
