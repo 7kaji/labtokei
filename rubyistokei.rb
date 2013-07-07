@@ -41,5 +41,41 @@ end
       database = Database.new(DATA_PATH)
       JSON.dump(database.data)
     end
+
+    # POST Form
+    get '/new' do
+      haml :new
+    end
+
+    # POST url, name, title, bio必須.
+    post '/create' do
+      data = 
+      {
+        'url' => params[:url]? params['url'].to_s : nil,
+        'tokei' => {
+          'top' => params[:top]? params[:top].to_s : '100',
+          'left' => params[:left]? params[:left].to_s : '200',
+          'color' => params[:color]? params[:color] : '#fefefe',
+          'font' => params[:font].to_s
+        },
+        'name' => params[:name].to_s,
+        'title' => params[:title].to_s,
+        'bio'=> params[:bio].to_s,
+        'taken_by' => params[:taken_by]? params[:taken_by] : 'somebody',
+      }
+      
+      # 必須項目ないとエラー
+      return 'error' unless data['url'] && data['name'] && data['title'] && data['bio']
+
+      # nameでvalidation
+      return 'already exists' if File.exists?("./data/#{data['name']}.yaml")
+
+      # yaml書き込み
+      File.open("./data/#{params[:name]}.yaml",'w'){|f|
+        f.write YAML.dump(data)
+      }
+      return 'Completed image upload!!'
+    end
+
 #  end
 #end

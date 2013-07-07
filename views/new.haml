@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %title IPUtokei
+    %script(src="/js/jquery-1.9.1.min.js")
+    :css
+      body { background-color: #000; color: #fff; }
+    %script(type="text/html" id="tokei-template")
+
+  %body
+    %h1 POST
+    %form{ action: "/create", method: "post"}
+      ImageURL : 
+      %input{ name: 'url' } 
+      %br
+      Name :
+      %input{ name: 'name' }
+      %br
+      Title :
+      %input{ name: 'title' }
+      %br
+      Bio :
+      %input{ name: 'bio' }
+      %br
+      Taken by :
+      %input{ name: 'taken_by' }
+      %br
+      Top :
+      %input{ name: 'top' }
+      %br
+      Left :
+      %input{ name: 'left' }
+      %br
+      Color :
+      %input{ name: 'color' }
+      %br
+      Font :
+      %input{ name: 'font' }
+      %br
+      %input{ type: "submit", value: 'Post!' }
